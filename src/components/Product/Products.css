@@ -1,4 +1,5 @@
 .product {
+    position: relative;
     width: 300px;
     height: 510px;
     border: 1px solid #95A0A7;
@@ -38,6 +39,7 @@
     background: #FFE0B3;
     border: 1px solid #95A0A7;
     border-radius: 0px 0px 8px 8px;
-    
+    position: absolute;
+    bottom: 0;
 
 }
