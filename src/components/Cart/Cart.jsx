@@ -7,9 +7,17 @@ const Cart = ({cart}) => {
     console.log(cart);
     let  totapPrice=0;
     let totalShipping=0;
+    let quantity=0;
     for(const product of cart){
-         totapPrice= totapPrice+product.price;
+        if(product.quantity===0){
+            product.quantity=1
+        }
+        // product.quantity=product.quantity || 1;
+
+         totapPrice= totapPrice+product.price * product.quantity ;
         totalShipping=totalShipping+product.shipping;
+        quantity=quantity+product.quantity;
+        console.log(quantity)
     }
     const tax = totapPrice*7/100;
     const grandTotal=totapPrice+totalShipping+tax;
